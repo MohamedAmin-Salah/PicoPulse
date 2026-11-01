@@ -35,14 +35,14 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(pulsmatare main.c )
+add_executable(pulsmatare src/main.c )
 target_sources(pulsmatare PRIVATE
-    max30102.c
-    measurement.c
-    pulse.c
-    spo2.c
-    display.c
-    ui.c
+    src/max30102.c
+    src/measurement.c
+    src/pulse.c
+    src/spo2.c
+    src/display.c
+    src/ui.c
 )
 
 pico_set_program_name(pulsmatare "pulsmatare")
@@ -62,7 +62,7 @@ target_link_libraries(pulsmatare
 
 # Add the standard include files to the build
 target_include_directories(pulsmatare PRIVATE
-        ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
 # Add any user requested libraries
