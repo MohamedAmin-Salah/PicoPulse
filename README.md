@@ -70,15 +70,17 @@ The firmware follows a modular design in which sensor acquisition, measurement m
 
 ### Firmware Architecture
 
-| Module | Responsibility |
-|---|---|
-| `main.c` | System initialization and main execution flow |
-| `max30102.c / max30102.h` | Sensor configuration, I²C communication and FIFO handling |
-| `measurement.c / measurement.h` | Circular buffer and measurement statistics |
-| `pulse.c / pulse.h` | PPG signal processing and BPM estimation |
-| `spo2.c / spo2.h` | Experimental RED/IR optical ratio analysis |
-| `display.c / display.h` | ST7735S display driver and SPI communication |
-| `ui.c / ui.h` | Screen layout and measurement visualization |
+| Source Files (`src/`) | Header Files (`include/`) | Responsibility |
+|---|---|---|
+| `main.c` | — | System initialization and main execution flow |
+| `max30102.c` | `max30102.h` | Sensor configuration, I²C communication and FIFO handling |
+| `measurement.c` | `measurement.h` | Circular buffer and measurement statistics |
+| `pulse.c` | `pulse.h` | Signal processing and BPM estimation |
+| `spo2.c` | `spo2.h` | Experimental RED/IR ratio analysis |
+| `display.c` | `display.h` | ST7735S display driver and SPI communication |
+| `ui.c` | `ui.h` | User interface and visualization |
+
+The project separates implementation files in `src/` from module interfaces in `include/`.
 
 This architecture provides clear separation between the main subsystems and makes the firmware easier to inspect, test and extend.
 
