@@ -235,7 +235,17 @@ The display enables local operation without requiring a connected computer.
 
 USB serial communication is available for additional diagnostics and inspection of sensor measurements during development.
 
-*Photographs of the physical prototype and user interface can be added here.*
+### Physical Prototype
+
+The assembled PicoPulse prototype integrates the Raspberry Pi Pico 2 W, MAX30102 optical sensor and ST7735S TFT display.
+
+![PicoPulse hardware prototype](images/Picoulse2.jpg)
+
+### TFT Display
+
+The display presents heart rate estimates and measurement information directly on the device.
+
+![PicoPulse TFT display](images/PicoPulse1.jpg)
 
 ---
 
